@@ -1,0 +1,49 @@
+{
+  "name": "zubaer/zubquant",
+  "description": "Zero-dependency Post-Quantum Cryptography SDK for PHP 8.1+ (NIST FIPS 203 ML-KEM-768, IETF X-Wing Hybrid KEM, FIPS 204 ML-DSA-65, AES-256-GCM), 100% wire-compatible with the zubquant NPM package.",
+  "type": "library",
+  "keywords": [
+    "post-quantum",
+    "quantum-safe",
+    "pqc",
+    "ml-kem",
+    "x-wing",
+    "ml-dsa",
+    "encryption",
+    "laravel",
+    "wordpress"
+  ],
+  "homepage": "https://wp.zubaer.com/zubquant/",
+  "license": "MIT",
+  "support": {
+    "docs": "https://wp.zubaer.com/zubquant/#docs",
+    "source": "https://github.com/zubaer-ahammed/zubquant"
+  },
+  "authors": [
+    {
+      "name": "Md. Zubaer Ahammed",
+      "email": "contact@zubaer.com",
+      "homepage": "https://zubaer.com"
+    }
+  ],
+  "funding": [
+    {
+      "type": "patreon",
+      "url": "https://www.patreon.com/Zubaer/posts/zubquant-pro-e-0-174534260"
+    }
+  ],
+  "require": {
+    "php": ">=8.1",
+    "ext-openssl": "*",
+    "ext-sodium": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "Zubaer\\ZubQuant\\": "src/"
+    }
+  },
+  "scripts": {
+    "test": "php tests/CrossLanguageTest.php"
+  }
+}
+

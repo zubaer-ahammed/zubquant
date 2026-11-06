@@ -1,0 +1,54 @@
+{
+  "name": "zubaer/laravel-zubquant",
+  "description": "Post-Quantum Cryptography for Laravel (Hybrid X-Wing ML-KEM-768 + X25519 Eloquent Casts, Quantum-Signed Webhooks via ML-DSA-65, and Artisan Keygen).",
+  "type": "library",
+  "keywords": [
+    "laravel",
+    "post-quantum",
+    "quantum-safe",
+    "pqc",
+    "eloquent-encryption",
+    "ml-kem",
+    "x-wing",
+    "ml-dsa"
+  ],
+  "homepage": "https://wp.zubaer.com/zubquant/",
+  "license": "MIT",
+  "support": {
+    "docs": "https://wp.zubaer.com/zubquant/#docs",
+    "source": "https://github.com/zubaer-ahammed/zubquant"
+  },
+  "authors": [
+    {
+      "name": "Md. Zubaer Ahammed",
+      "email": "contact@zubaer.com",
+      "homepage": "https://zubaer.com"
+    }
+  ],
+  "funding": [
+    {
+      "type": "patreon",
+      "url": "https://www.patreon.com/Zubaer/posts/zubquant-pro-e-0-174534260"
+    }
+  ],
+  "require": {
+    "php": ">=8.1",
+    "zubaer/zubquant": "^1.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Zubaer\\LaravelZubQuant\\": "src/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Zubaer\\LaravelZubQuant\\ZubQuantServiceProvider"
+      ],
+      "aliases": {
+        "ZubQuant": "Zubaer\\LaravelZubQuant\\Facades\\ZubQuant"
+      }
+    }
+  }
+}
+
