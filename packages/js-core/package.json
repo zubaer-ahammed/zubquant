@@ -1,0 +1,62 @@
+{
+  "name": "zubquant",
+  "version": "1.0.0",
+  "description": "Zero-dependency Post-Quantum Cryptography (NIST FIPS 203 ML-KEM-768, IETF X-Wing Hybrid KEM, FIPS 204 ML-DSA-65, AES-256-GCM) for Browser & Node.js, wire-compatible with PHP, Laravel, and WordPress.",
+  "keywords": [
+    "post-quantum",
+    "quantum-safe",
+    "pqc",
+    "ml-kem",
+    "ml-kem-768",
+    "kyber",
+    "x-wing",
+    "ml-dsa",
+    "dilithium",
+    "encryption",
+    "e2ee",
+    "laravel",
+    "wordpress"
+  ],
+  "homepage": "https://wp.zubaer.com/zubquant/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zubaer-ahammed/zubquant.git",
+    "directory": "packages/js-core"
+  },
+  "funding": {
+    "type": "polar",
+    "url": "https://buy.polar.sh/polar_cl_brmuJexJSmUsWDysyGsTNjFpVhmAJAqRoSPvi0G4qie"
+  },
+  "author": "Md. Zubaer Ahammed <contact@zubaer.com> (https://zubaer.com)",
+  "license": "MIT",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "browser": "./dist/zubquant.browser.js",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": [
+    "dist",
+    "src",
+    "README.md",
+    "LICENSE"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "test": "node --test test/zubquant.test.mjs",
+    "prepublishOnly": "npm run build && npm test"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
+

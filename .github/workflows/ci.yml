@@ -1,0 +1,37 @@
+name: ZubQuant Cross-Language PQC Tests & Build
+
+on:
+  push:
+    branches: [ main ]
+    tags: [ 'v*' ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test-pqc-suite:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Setup PHP 8.2
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.2'
+          extensions: openssl, sodium
+
+      - name: Build & Test JS/TS Core SDK (zubquant)
+        working-directory: packages/js-core
+        run: |
+          npm run build
+          npm test
+
+      - name: Test PHP Core SDK & Cross-Language Vectors (zubaer/zubquant)
+        working-directory: packages/php-core
+        run: |
+          php tests/CrossLanguageTest.php
